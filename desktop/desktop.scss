@@ -71,10 +71,20 @@
   }
 
   .search-icon {
-    float: right;
-    border: 1px solid mix($primary, $secondary);
-    border-left: none;
-    height: 32px;
+    border-radius: 25px;
+    position: absolute;
+    z-index: 2;
+    order: 2;
+    right: 0;
+    background: transparent;
+    .discourse-no-touch & {
+      &:hover {
+        background: transparent;
+        .d-icon {
+          color: var(--primary-high);
+        }
+      }
+    }
   }
 
   .search-input {
